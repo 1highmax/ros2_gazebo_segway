@@ -1,0 +1,35 @@
+{
+    "env": {
+      "myDefaultIncludePath": ["${workspaceFolder}"],
+      "myCompilerPath": "/usr/local/bin/gcc-7"
+    },
+    "configurations": [
+      {
+        "name": "Linux",
+        "intelliSenseMode": "clang-x64",
+        "includePath": ["${myDefaultIncludePath}",
+                        "/opt/ros/foxy/include",
+                        "/usr/local/include/gazebo-11",
+                        "${workspaceFolder}/src/segway/include",
+                        "/usr/include/sdformat-9.5",
+                        "/usr/include/ignition/math6",
+                        "/usr/include/ignition/transport8",
+                        "/usr/include**",
+                        "/usr/include/**",
+                      ],      
+        "forcedInclude": [
+        ],
+        "compilerPath": "/usr/bin/clang",
+        "cStandard": "c11",
+        "cppStandard": "c++17",
+        "browse": {
+          "path": ["${workspaceFolder}"],
+          "limitSymbolsToIncludedHeaders": true,
+          "databaseFilename": ""
+        }
+      }
+    ],
+    "version": 4
+  }
+  
+  

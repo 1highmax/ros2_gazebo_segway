@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="maxworld">
+    <!-- A global light source -->
+		<include>
+			<uri>model://sun</uri>
+		</include>
+
+		<!-- A ground plane -->
+		<include>
+			<uri>model://ground_plane</uri>
+		</include>
+        <scene>
+        <sky>
+            <clouds>
+            <speed>10</speed>
+            </clouds>
+            <sunset>17</sunset>
+            <sunrise>8</sunrise>
+            <fog>
+                <color>165,42,42</color>
+                <type>quadratic</type>
+                <density>100.0</density>
+                <linearStart>10.0</linearStart>
+                <linearEnd>515.0</linearEnd>
+            </fog>
+                
+        </sky>
+        </scene>
+
+  </world>
+</sdf>

@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "gzserver_gdb",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/usr/bin/gzserver",
+            "args": [
+                "${workspaceFolder}/src/segway/gzmodels/clouds_plane.world.xml",
+                "--verbose",
+                "-s",
+                "libgazebo_ros_factory.so"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            // "environment": [{
+            //     "name": "LD_PRELOAD",
+            //     "value": "${workspaceFolder}/install/segway/lib/segway/libgazebo_ros_segway_drive.so"
+            // }],
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "postDebugTask": "kill_gazebo",
+        },
+        {
+            "name": "launch_plugin",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/segway/launch/manual.launch.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Container/Loader",
+            "configurations": ["gzserver_gdb", "launch_plugin"],
+            "preLaunchTask": "build_segway",
+        },
+    ]
+}

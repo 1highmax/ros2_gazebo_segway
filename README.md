@@ -1,10 +1,11 @@
 # A ros2 workspace with a self balancing segway gazebo plugin
 
-The purpose of this repo is:
+## Purpose of this repo
 - To be a template for developing ros2 gazebo extensions in vscode
 - To facilitate the setup of gzserver/gzclient, ros2 launch, gdb, sdf files, shared libraries, cmake files and everything else that is needed for ros2 gazebo development in vscode
 - To be a playground for modifications of the plugin
 
+## Content of the repository
 - vscode folder
   - launch.json - launch debug configurations for developing the plugin
   - tasks.json - tasks for the debug configuration
